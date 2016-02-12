@@ -1,14 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 
-class Todo extends Component {
-  render () {
-    return (
-      <li style={{ color: this.props.completed ? 'green' : 'black' }}>
-        {this.props.text}
-      </li>
-    )
-  }
-}
+const Todo = ({completed, text}) => (
+  <li style={{ color: completed ? 'green' : 'black' }}>
+    {text}
+  </li>
+)
 
 Todo.propTypes = {
   completed: PropTypes.bool.isRequired,
